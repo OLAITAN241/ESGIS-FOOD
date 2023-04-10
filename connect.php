@@ -7,7 +7,7 @@ $dbname = "food";//nom de la base donnée créée
 
 try {
     //Création de la connexion
-    $connexion = new PDO("mysql:host=$servername; dbname", 'root', '');
+    $connexion = new PDO("mysql:host=localhost; dbname", 'root', '');
 } catch(\Throwable $th) {
     die("La connexion a échoué");
     exit;
@@ -29,10 +29,8 @@ if(isset($_POST['envoi']) ){
         if($count>0){
             //s'il arrive à trouver, ce qui veut dire que notre nombre retourner est supérieur à 0
             header('Location: acceuil.php'); //renvoi vers la page d'accueil
-        }elseif{
-            echo "Utilisateur ou mot de passe incorret"; //sinon il renvoi ce text
         }else{
-            echo "vide"; //renvoi ça si les champs sont vide
+            echo "Utilisateur ou mot de passe incorret"; //sinon il renvoi ce text
         }
     }
 }
