@@ -18,8 +18,9 @@ if(isset($_POST['envoi']) ){
     if( !empty($_POST['name']) & !empty($_POST['pass_word']) & !empty($_POST['email']) ){
         //verifier si les champs du nom, de pass_word et l'email sont pas vide
         //stoctage des données entrer pas l'user dans les trois variables suivantes
-        $user_name=$_POST['name'];
-        $email=$_POST['email'];
+        $user_name=$_POST['nom_client'];
+		$user_name=$_POST['prenom_client'];
+        $email=$_POST['email_client'];
         $pass_word=$_POST['pass_word'];
 
         //requete sql qui permet de verifier si ce compte existe dans la base de donnée et laisse passer l'user
